@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>r6x.io</title>
+    <link rel="icon" type="image/x-icon" href="icons/logo.svg">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a class="logo" href="#">r6x.io</a>
+
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="search by">
+        <select name="search-select" id="search-type">
+            <option value="name">name</option>
+            <option value="tags">tags</option>
+            <option value="creator">creator</option>
+        </select>
+    </div>
+    
+    <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="R6">R6</button>
+        <button class="filter-btn" data-filter="R15">R15</button>
+    </div>
+    
+    <div class="items-grid" id="itemsGrid">
+    </div>
+
+    <div class="copyright">
+        <p>If you have any copyright claims, please write to the contact email address <button class="copy" onclick="navigator.clipboard.writeText('contact@r6x.io');">contact@r6x.io</button></p>
+        <p>2025</p>
+    </div>
+
+    <canvas id="gradientCanvas"></canvas>
+    <script src="item-cards.js"></script>
+    <script src="gradient.js"></script>
+    <script src="search-select.js"></script>
+</body>
+</html>
