@@ -1,10 +1,9 @@
 const items = [
-    { id: 1, name: 'Emote 1', category: 'R6', creator: 'Unknown' , tags: 'dance' },
-    { id: 1, name: 'Emote 2', category: 'R6', creator: 'LLA' , tags: 'emote' },
-    { id: 1, name: 'Emote 3', category: 'R6', creator: 'Unknown' , tags: 'tiktok, emote' },
-    { id: 1, name: 'Emote 4', category: 'R6', creator: 'Unknown' , tags: 'dance, tiktok' },
-    { id: 1, name: 'Emote 5', category: 'R15', creator: 'g24g5' , tags: 'slow' },
-    { id: 1, name: 'Emote 6', category: 'R15', creator: '2h2' , tags: 'dance, slow' },
+    { id: 1000, name: 'novement+', price: 2.4, description: 'the set of scripts that allow you to achieve a super smooth and realistic movement system at all', category: 'scripts' },
+    { id: 2000, name: 'typing+', price: 1.8, description: 'the module allows you to improve any text in your game by adding various animations for letters, text appearance, and disappearance.', category: 'scripts' },
+    { id: 3000, name: 'voice+', price: 2, description: 'integrate a custom voice chat system into the game that allows you to apply voice filters such as reverb, chorus, and more', category: 'scripts' },
+    { id: 4000, name: 'smooth mouse', price: 0.8, description: 'the simple script that allows you to smoothly zoom in and out with the mouse wheel', category: 'scripts' },
+    { id: 5000, name: 'handcamera toolkit', price: 1.5, description: 'fun-made handcamera camera system, has a large number of first-person settings', category: 'scripts' },
 ];
 
 const itemsGrid = document.getElementById('itemsGrid');
@@ -30,12 +29,11 @@ function displayItems(itemsToShow) {
         card.dataset.category = item.category;
         card.innerHTML = `
             <h3>${item.name}</h3>
-            <div class='model-handler'></div>
-            <p>Creator: ${item.creator}</p>
-            <p>Tags: ${item.tags}</p>
-            <p>Format: ${item.category}</p>
+            <img class='item-icon' src="./content/script_icon.png" alt="script">
+            <p class='description'>${item.description}</p>
+            <p>price: ${item.price}$</p>
+            <p>category: ${item.category}</p>
         `;
-        
         card.style.opacity = '0';
         card.style.filter = 'blur(30px)';
         card.style.transform = 'translateY(15px) rotateX(30deg)';
